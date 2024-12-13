@@ -1,0 +1,164 @@
+:root {
+    --color-white: #fff;
+    --color-red: #e63636;
+    --color-dark1: #181818;
+    --color-dark2: #1e1e1e;
+    --color-gray: rgb(48, 47, 47);
+    --color-purple1: #9333ff;
+    --color-purple2: indigo;
+    --lightgray: gray;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--color-dark1);
+    color: var(--color-white);
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    height: 100vh; /* Ocupa 100% da altura da tela */
+    padding: 20px;
+    flex-direction: column; /* Organiza os itens na direção da coluna */
+}
+
+
+h1 {
+    font-size: 2.5rem;
+    color: var(--color-purple2);
+    margin-bottom: 20px;
+    text-align: center;  /* Centraliza o texto */
+    width: 100%;  /* Garante que ocupe toda a largura */
+}
+
+.formulario {
+    background-color: var(--color-gray); /* Cor de fundo cinza */
+    padding: 2rem;
+    border-radius: 10px; /* Bordas arredondadas */
+    min-width: 300px;
+    width: 100%;
+    max-width: 500px;
+    overflow: auto;
+    font-weight: bolder;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content p {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.content form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+
+.inputs {
+    padding: 12px;
+    outline: none;
+    border-radius: 5px;
+    background-color: var(--color-dark2);
+    border: 1px solid var(--color-dark2);
+    color: var(--color-white);
+    width: 100%;
+    box-sizing: border-box;
+    transition: 0.3s;
+}
+
+.inputs:focus {
+    border-color: var(--color-purple1);
+}
+
+button[type="submit"],
+.Login,
+.button1 {
+    background-color: var(--color-purple2);
+    outline: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 1rem;
+    color: var(--color-white);
+    transition: 0.3s;
+    width: 100%;
+    margin-bottom: 1rem;  /* Espaçamento entre os botões */
+}
+
+button[type="submit"]:hover,
+.Login:hover,
+.button1:hover {
+    background-color: var(--color-purple1);
+}
+
+.hidden {
+    display: none;
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    font-size: 1rem;
+}
+
+th {
+    background-color: var(--color-purple2);
+    color: var(--color-white);
+}
+
+td {
+    background-color: var(--color-dark2);
+}
+
+td button {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    background-color: var(--color-red);
+    border-radius: 5px;
+    color: var(--color-white);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+td button:hover {
+    background-color: darkred;
+}
+
+button[type="button"] {
+    width: 100%;
+    background-color: var(--color-purple2);
+}
+
+button[type="button"]:hover {
+    background-color: var(--color-purple1);
+}
+
+@media screen and (max-width: 576px) {
+    .formulario {
+        min-width: 250px;
+    }
+
+    .box-select {
+        flex-direction: column;
+        gap: 5px;
+    }
+}

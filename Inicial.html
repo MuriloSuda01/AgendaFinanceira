@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Cadastro e Agenda</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1> Agenda Financeira</h1>
+    
+    <!-- Página Inicial -->
+    <div id="pagina-inicial">
+        <button class="button1"  onclick="mostrarPagina('cadastro')">Cadastro</button>
+        <button class="button1"   onclick="mostrarPagina('login')">Login</button>
+    </div>
+
+    <!-- Página de Cadastro -->
+    <div id="pagina-cadastro" class="hidden">
+        <h2>Cadastro</h2>
+        <form id="form-cadastro">
+            <label for="cadastro-usuario">Usuário:</label>
+            <input type="text" id="cadastro-usuario" required><br><br>
+
+            <label for="cadastro-senha">Senha:</label>
+            <input type="password" id="cadastro-senha" required><br><br>
+
+            <button type="submit">Cadastrar</button>
+        </form>
+        <button class="button1" onclick="mostrarPagina('inicial')">Voltar</button>
+    </div>
+
+    <!-- Página de Login -->
+    <div id="pagina-login" class="hidden">
+        <h2>Login</h2>
+        <form id="form-login">
+            <label for="login-usuario">Usuário:</label>
+            <input type="text" id="login-usuario" required><br><br>
+
+            <label for="login-senha">Senha:</label>
+            <input type="password" id="login-senha" required><br><br>
+
+            <button type="submit">Entrar</button>
+        </form>
+        <button class="button1" onclick="mostrarPagina('inicial')">Voltar</button>
+    </div>
+
+    <!-- Página da Agenda -->
+    <div id="pagina-agenda" class="hidden">
+        <h2>Agenda Financeira</h2>
+        <form id="form-agenda">
+            <label for="nome-item">Nome:</label>
+            <input type="text" id="nome-item" required><br><br>
+
+            <label for="valor-item">Valor:</label>
+            <input type="number" id="valor-item" required><br><br>
+
+            <button type="submit">Adicionar</button>
+        </form>
+        <table border="1" id="tabela-agenda">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Valor</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <button class="button1"  onclick="baixarJSON()">Baixar Agenda</button>
+        <button class="button1"  onclick="mostrarPagina('inicial')">Sair</button>
+    </div>
+
+
+    <script src="index.js"></script>
+
+</body>
+
+</html>
